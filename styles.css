@@ -1,6 +1,6 @@
 /* overall styling */
-body {
-   /*display: inline;*/
+.container {
+   display: flex;
 }
 
 /* nav bar styling */
@@ -17,7 +17,6 @@ nav {
    border: 2px solid black;
    padding: 1% 1%;
    width: 20%;
-   height: 350px;
    background-color: #4DD7FA;
 }
 
@@ -27,6 +26,5 @@ nav {
    border: 2px solid black;
    padding: 1% 1%;
    width: 62%;
-   height: 350px;
    background-color: #FEFAC0;
 }
