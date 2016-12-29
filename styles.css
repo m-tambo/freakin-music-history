@@ -7,6 +7,14 @@ body {
    display: flex;
 }
 
+ul {
+   list-style-type: none;
+}
+
+li{
+   display: inline;
+}
+
 /* nav bar styling */
 nav {
    margin: 3% 7% 2%;
