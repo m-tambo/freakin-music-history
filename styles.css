@@ -1,4 +1,8 @@
 /* overall styling */
+body {
+   font-family: 'Averia Libre', cursive;
+}
+
 .container {
    display: flex;
 }
