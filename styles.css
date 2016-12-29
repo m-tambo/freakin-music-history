@@ -13,6 +13,7 @@ nav {
 
 /* side bar styling*/
 #sidebar {
+   display: inline;
    margin: 0 2% 0 7%;
    border: 2px solid black;
    width: 30%;
@@ -21,6 +22,7 @@ nav {
 
 /* playlist styling */
 #playlist {
+   display: inline;
    margin: 0 7% 0 0;
    border: 2px solid black;
    width: 62%;
