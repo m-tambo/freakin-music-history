@@ -1,6 +1,6 @@
 /* overall styling */
 body {
-
+   /*display: inline;*/
 }
 
 /* nav bar styling */
@@ -13,18 +13,20 @@ nav {
 
 /* side bar styling*/
 #sidebar {
-   display: inline;
    margin: 0 2% 0 7%;
    border: 2px solid black;
-   width: 30%;
+   padding: 1% 1%;
+   width: 20%;
+   height: 350px;
    background-color: #4DD7FA;
 }
 
 /* playlist styling */
 #playlist {
-   display: inline;
    margin: 0 7% 0 0;
    border: 2px solid black;
+   padding: 1% 1%;
    width: 62%;
+   height: 350px;
    background-color: #FEFAC0;
 }
