@@ -1,6 +1,8 @@
 /* nav bar styling */
 nav {
-
+   margin: 3% 3%;
+   border: 2px solid black;
+   background-color: #FFB4B0;
 }
 
 /* side bar styling*/
