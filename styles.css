@@ -21,5 +21,8 @@ nav {
 
 /* playlist styling */
 #playlist {
-
+   margin: 0 7% 0 0;
+   border: 2px solid black;
+   width: 62%;
+   background-color: #FEFAC0;
 }
