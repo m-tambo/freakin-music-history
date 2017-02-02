@@ -27,3 +27,9 @@ app
         redirectTo: ('/')
       })
   })
+  .directive('playlist', function () {
+    return {
+      restrict: 'E',
+      templateUrl: "app/partials/playlist.html"
+    }
+  })
