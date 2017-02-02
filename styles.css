@@ -40,3 +40,16 @@ nav {
    width: 62%;
    background-color: #FEFAC0;
 }
+
+/* add track styling */
+.add-track {
+   margin: 0 7% 0 7%;
+   border: 2px solid black;
+   padding: 1% 1%;
+   /*width: 66%%;*/
+   background-color: #4DD7AA;
+}
+
+.add-track input {
+   margin-top: 2%;
+}
