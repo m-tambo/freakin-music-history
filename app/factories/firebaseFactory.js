@@ -10,7 +10,7 @@ app
             console.log(res);
           })
       },
-      addTrack : () => {
+      postTrack : () => {
 
         const newTrack = {}
         newTrack.name = "name",
