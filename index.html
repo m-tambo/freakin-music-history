@@ -1,6 +1,6 @@
 <!doctype html>
-
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Freakin Music History</title>
@@ -9,58 +9,28 @@
 </head>
 
 <body>
+      <!-- _____nav bar______ -->
+  <nav>
+    <a href="#">View Music</a> |
+    <a href="#">Add Music</a> |
+    <a href="#">Profile</a>
+  </nav>
 
-   <!-- nav bar -->
-      <nav>
-         <a href="#">View Music</a>
-         |
-         <a href="#">Add Music</a>
-         |
-         <a href="#">Profile</a>
-      </nav>
+      <!-- _____app_____ -->
+  <div ng-app="musicHistory">
+    <div ng-view>
+    </div>
+  </div>
 
-   <div class="container">
-
-   <!-- sidebar -->
-      <div id="sidebar">
-         <h4>Song Length: </h4>
-         <input type="range" />
-         <h4>Artist: </h4>
-         <select>
-            <option>Dirty Projectors</option>
-            <option>Mild High Club</option>
-            <option>Unknown Mortal Orchestra</option>
-            <option>Xenia Rubinos</option>
-            <option>Hiatus Kaiyote</option>
-         </select>
-         <h4>Album: </h4>
-         <select>
-            <option>Swing Lo Magellan</option>
-            <option>Bitte Orca</option>
-            <option>II</option>
-            <option>Multi-Love</option>
-            <option>Skiptracing</option>
-            <option>Tawk Tomohawk</option>
-            <option>Choose Your Weapon</option>
-            <option>Black Terry Cat</option>
-         </select>
-         <h4>Genre: </h4>
-         <label><input type="checkbox" />Rock</label>
-      </div>
-
-   <!-- playlist -->
-      <playlist id="playlist">
-
-      </playlist>
-
-   </div>
-
-<!-- script tags -->
-   <script src="/lib/angular/angular.min.js"></script>
-   <script src="/lib/angular-route/angular-route.min.js"></script>
-   <script src="/lib/firebase/firebase.js"></script>
-   <script src="/app/app.js"></script>
-
-
+      <!-- _____script tags_____ -->
+  <script src="/lib/angular/angular.min.js"></script>
+  <script src="/lib/angular-route/angular-route.min.js"></script>
+  <script src="/lib/firebase/firebase.js"></script>
+  <script src="/app/app.js"></script>
+  <script src="/app/controllers/loginCtrl.js"></script>
+  <script src="/app/controllers/registerCtrl.js"></script>
+  <script src="/app/controllers/mainCtrl.js"></script>
+  <script src="/app/controllers/addCtrl.js"></script>
 </body>
+
 </html>
