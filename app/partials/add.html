@@ -1,9 +1,13 @@
 <div class="add-track">
   <form>
-    <input type="text" name="new-track"><br />
-    <input type="text" name="new-track"><br />
-    <input type="text" name="new-track"><br />
-    <input ng-submit="addTrack()" type="button" name="new-track" value="Add to your songs">
+    <h2>Add a New Song</h2>
+    <h4>Song Title: </h4>
+      <input type="text" name="new-track" ng-model="title" required><br />
+    <h4>Atrist: </h4>
+      <input type="text" name="new-track" ng-model="artist" required><br />
+    <h4>Album: </h4>
+      <input type="text" name="new-track" ng-model="album" required><br />
+    <input ng-click="addTrack()" type="button" name="new-track" value="Add to your songs">
   </form>
 
 

@@ -12,10 +12,10 @@ app
       },
       postTrack : () => {
 
-        const newTrack = {}
-        newTrack.name = "name",
-        newTtrack.artist = "artist",
-        newTrack.album = "album"
+        const newTrack = {};
+        newTrack.title = title;
+        newTtrack.artist = artist;
+        newTrack.album = album;
 
         return $http
           .post('https://freakin-music-history.firebaseio.com/.json', 'newTrack')
