@@ -1,27 +1,21 @@
 <div class="container">
+
 <!-- _____sidebar_____ -->
   <div id="sidebar">
+
     <h4>Song Length: </h4>
     <input type="range" />
+
     <h4>Artist: </h4>
     <select>
-      <option>Dirty Projectors</option>
-      <option>Mild High Club</option>
-      <option>Unknown Mortal Orchestra</option>
-      <option>Xenia Rubinos</option>
-      <option>Hiatus Kaiyote</option>
+      <option ng-repeat="track in allTracks">{{track.artist}}</option>
     </select>
+
     <h4>Album: </h4>
     <select>
-      <option>Swing Lo Magellan</option>
-      <option>Bitte Orca</option>
-      <option>II</option>
-      <option>Multi-Love</option>
-      <option>Skiptracing</option>
-      <option>Tawk Tomohawk</option>
-      <option>Choose Your Weapon</option>
-      <option>Black Terry Cat</option>
+      <option ng-repeat="track in allTracks">{{track.album}}</option>
     </select>
+
     <h4>Genre: </h4>
     <label>
       <input type="checkbox" />Rock</label>
@@ -29,13 +23,20 @@
 
 <!-- _____playlist_____ -->
   <div id="playlist">
-    <h2>Stage or Screen</h2>
-    <ul>
-      <li>Unknown Mortal Orchestra</li>|
-      <li>Multi-Love</li>|
-      <li>Rock</li>
-    </ul>
-    <h2>Irresponsible Tune</h2>
+    <div ng-repeat="track in allTracks">
+      <h2>{{track.title}}</h2>
+      <ul>
+        <li>{{track.artist}}</li> |
+        <li>{{track.album}}</li> |
+        <li>Rock</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- <h2>Irresponsible Tune</h2>
     <ul>
       <li>Dirty Projectors</li>|
       <li>Swing Lo Magellan</li>|
@@ -52,6 +53,4 @@
       <li>Xenia Rubinos</li>|
       <li>Black Terry Cat</li>|
       <li>Rock</li>
-    </ul>
-  </div>
-</div>
+    </ul> -->

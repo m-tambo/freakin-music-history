@@ -1,8 +1,9 @@
-app.controller('mainCtrl', function(firebaseFactory) {
+app.controller('mainCtrl', function($scope, firebaseFactory) {
 
   firebaseFactory
     .getTracks()
-    .then((data) => {
-      console.log(data)
+    .then((res) => {
+      console.log(res.data)
+      $scope.allTracks = res.data
     })
 })
