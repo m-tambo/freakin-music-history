@@ -19,8 +19,9 @@ app
 
         return $http
           .post('https://freakin-music-history.firebaseio.com/.json', 'newTrack')
-          .then((res) => {
-            console.log(res)
+          .then(() => {
+            console.log(newTrack)
+            return newTrack
           })
       },
       deleteTrack : (track) => {
