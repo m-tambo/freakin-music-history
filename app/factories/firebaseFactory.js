@@ -11,8 +11,17 @@ app
           })
       },
       addTrack : () => {
+
+        const newTrack = {}
+        newTrack.name = "name",
+        newTtrack.artist = "artist",
+        newTrack.album = "album"
+
         return $http
-          .post('https://freakin-music-history.firebaseio.com/.json')
+          .post('https://freakin-music-history.firebaseio.com/.json', 'newTrack')
+          .then((res) => {
+            console.log(res)
+          })
       },
       deleteTrack : (track) => {
         return $http
