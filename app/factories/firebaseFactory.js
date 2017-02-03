@@ -10,15 +10,18 @@ app
             console.log(res);
           })
       },
-      postTrack : () => {
+      postTrack : (tit, art, alb) => {
+        console.log('posting to firebase')
 
-        const newTrack = {};
-        newTrack.title = title;
-        newTtrack.artist = artist;
-        newTrack.album = album;
+        let newTrack = {};
+        newTrack.title = tit;
+        newTrack.artist = art;
+        newTrack.album = alb;
+
+        console.log(newTrack)
 
         return $http
-          .post('https://freakin-music-history.firebaseio.com/.json', 'newTrack')
+          .post('https://freakin-music-history.firebaseio.com/.json', newTrack)
           .then(() => {
             console.log(newTrack)
             return newTrack
