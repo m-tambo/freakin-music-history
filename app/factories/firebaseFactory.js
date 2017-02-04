@@ -7,30 +7,39 @@ app
           .get('https://freakin-music-history.firebaseio.com/.json')
           .then((res) => {
             return res;
-            console.log(res);
+            // console.log(res);
+          })
+          .then((obj) => {  // convert fireBase object to array
+            const array =[];
+            for (key in obj) {
+              array.push(obj[key])
+            }
+            return array
           })
       },
       postTrack : (tit, art, alb) => {
-        console.log('posting to firebase')
 
         let newTrack = {};
         newTrack.title = tit;
         newTrack.artist = art;
         newTrack.album = alb;
 
-        console.log(newTrack)
-
         return $http
           .post('https://freakin-music-history.firebaseio.com/.json', newTrack)
           .then(() => {
-            console.log(newTrack)
             return newTrack
           })
       },
       deleteTrack : (track) => {
         return $http
           .delete(`https://freakin-music-history.firebaseio.com/${track}.json`)
-      }
-
+      },
+      // makeArray : (obj) => {
+      //   let newArray = [];
+      //   for (key in obj) {
+      //     newArray.push(obj[key])
+      //   }
+      //   return newArray
+      // }
     }
   })
