@@ -17,4 +17,5 @@ app.controller('addCtrl', function(firebaseFactory, $scope, $location) {
     }
   }
 
+
 })

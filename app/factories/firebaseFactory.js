@@ -6,16 +6,15 @@ app
         return $http
           .get('https://freakin-music-history.firebaseio.com/.json')
           .then((res) => {
-            return res;
-            // console.log(res);
+            return res.data;
           })
-          .then((obj) => {  // convert fireBase object to array
-            const array =[];
-            for (key in obj) {
-              array.push(obj[key])
-            }
-            return array
-          })
+          // .then((obj) => {  // convert fireBase object to array
+          //   const array =[];
+          //   for (key in obj) {
+          //     array.push(obj[key])
+          //   }
+          //   return array
+          // })
       },
       postTrack : (tit, art, alb) => {
 

@@ -7,7 +7,7 @@
     <input type="range" />
 
     <h4>Artist: </h4>
-    <select>
+    <select ng-model="artistFilter" >
       <option selected disabled>-Filter by Artist-</option>
       <option ng-repeat="track in allTracks">{{track.artist}}</option>
     </select>
@@ -25,7 +25,7 @@
 
 <!-- _____playlist_____ -->
   <div id="playlist">
-    <div ng-repeat="track in allTracks">
+    <div ng-repeat="track in allTracks" ng-if="$index < 5">
       <h2>{{track.title}}</h2>
       <ul>
         <li>{{track.artist}}</li> |
