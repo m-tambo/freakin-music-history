@@ -5,17 +5,17 @@ app.controller('mainCtrl', function($scope, firebaseFactory) {
     .then((res) => {
       console.log(res)
       $scope.allTracks = res;
-      $scope.allArtists = [];
-      $scope.allAlbums = [];
 
+      // an array of all the artists
+      $scope.allArtists = [];
       for (key in res) {
         $scope.allArtists.push(res[key].artist)
       }
+      // an array of all the albums
+      $scope.allAlbums = [];
       for (key in res) {
         $scope.allAlbums.push(res[key].album)
       }
-        console.log($scope.allArtists)
-        console.log($scope.allAlbums)
 
     })
 

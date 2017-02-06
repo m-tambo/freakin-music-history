@@ -9,14 +9,16 @@
     <h4>Artist: </h4>
     <select ng-model="artistFilter" >
       <option selected disabled>-Filter by Artist-</option>
-      <option ng-repeat="track in allTracks">{{track.artist}}</option>
+      <option ng-repeat="track in allTracks">{{track.album}}</option>
     </select>
 
     <h4>Album: </h4>
-    <select>
+    <select ng-model="albumFilter">
       <option selected disabled>-Filter by Album-</option>
       <option ng-repeat="track in allTracks">{{track.album}}</option>
     </select>
+
+    <input type="text" ng-model="trackSearch" name="search" />
 
     <h4>Genre: </h4>
     <label>
@@ -25,7 +27,7 @@
 
 <!-- _____playlist_____ -->
   <div id="playlist">
-    <div ng-repeat="track in allTracks" ng-if="$index < 5">
+    <div ng-repeat="track in allTracks | filter: trackSearch" ng-if="$index < 5">
       <h2>{{track.title}}</h2>
       <ul>
         <li>{{track.artist}}</li> |

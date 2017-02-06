@@ -16,8 +16,8 @@ app
           //   return array
           // })
       },
-      postTrack : (tit, art, alb) => {
 
+      postTrack : (tit, art, alb) => {
         let newTrack = {};
         newTrack.title = tit;
         newTrack.artist = art;
@@ -29,16 +29,10 @@ app
             return newTrack
           })
       },
+
       deleteTrack : (track) => {
         return $http
           .delete(`https://freakin-music-history.firebaseio.com/${track}.json`)
       },
-      // makeArray : (obj) => {
-      //   let newArray = [];
-      //   for (key in obj) {
-      //     newArray.push(obj[key])
-      //   }
-      //   return newArray
-      // }
     }
   })
